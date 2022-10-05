@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="janvd"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-05 02:40:32 "/>
+        <attribute name="created" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjItMTAtMDU7IjAyOjMyOjE4ICI7MjgwOQ=="/>
+        <attribute name="edited" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjItMTAtMDU7IjAyOjQwOjMyICI7MTsyOTEy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="kleur" type="String" array="False" size=""/>
+            <declare name="eten" type="String" array="False" size=""/>
+            <declare name="auto" type="String" array="False" size=""/>
+            <declare name="film" type="String" array="False" size=""/>
+            <declare name="boek" type="String" array="False" size=""/>
+            <output expression="&quot;Wat is je favoriete kleur?&quot;" newline="True"/>
+            <input variable="kleur"/>
+            <output expression="&quot;Wat is je favoriete eten? &quot;" newline="True"/>
+            <input variable="eten"/>
+            <output expression="&quot;Wat is je favoriete auto? &quot;" newline="True"/>
+            <input variable="auto"/>
+            <output expression="&quot;Wat is je favoriete film? &quot;" newline="True"/>
+            <input variable="film"/>
+            <output expression="&quot;Wat is je favoriete boek? &quot;" newline="True"/>
+            <input variable="boek"/>
+            <output expression="&quot;Je favoriete kleur is &quot; &amp; eten &amp; &quot;. Je eet graag &quot; &amp; auto &amp; &quot;.Je lievelingsfilm is &quot; &amp; boek &amp; &quot; en je favoriete boek is &quot; &amp; film" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

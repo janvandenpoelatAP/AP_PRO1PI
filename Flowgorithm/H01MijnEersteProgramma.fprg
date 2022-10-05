@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="janvd"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-05 02:28:50 "/>
+        <attribute name="created" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjItMTAtMDU7IjAyOjIwOjA0ICI7MjgwMQ=="/>
+        <attribute name="edited" value="amFudmQ7REVTS1RPUC1KOVRWNUtTOzIwMjItMTAtMDU7IjAyOjI4OjUwICI7MTsyOTE4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="voornaam" type="String" array="False" size=""/>
+            <declare name="achternaam" type="String" array="False" size=""/>
+            <output expression="&quot;Type je voornaam:&quot;" newline="True"/>
+            <input variable="voornaam"/>
+            <output expression="&quot;Type je achternaam:&quot;" newline="True"/>
+            <input variable="achternaam"/>
+            <output expression="&quot;Je naam is dus &quot; &amp; achternaam &amp; &quot; &quot; &amp; voornaam" newline="True"/>
+            <output expression="&quot;Of &quot; &amp; voornaam &amp; &quot; &quot; &amp; achternaam" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
