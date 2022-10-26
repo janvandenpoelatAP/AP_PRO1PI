@@ -8,6 +8,67 @@ namespace LaboOefeningen
 {
     public class StringsEnHunMethoden
     {
+        public static void Keuzemenu()
+        {
+            Console.WriteLine("Kies uit volgende methoden door een cijfer te tikken:");
+            Console.WriteLine("    1 – VariabelenEnHoofdletters");
+            Console.WriteLine("    2 – MaaltafelsStringInterpolatie");
+            Console.WriteLine("    3 – RuimteStringInterpolatie");
+            Console.WriteLine("    4 – BerekenBtw");
+            Console.WriteLine("    5 – LeetSpeak");
+            Console.WriteLine("    6 – Instructies");
+            Console.WriteLine("    7 – SomVanCijfers");
+            Console.WriteLine("    8 – NaamUitMail");
+            Console.WriteLine("    9 – EersteLetterEnAchternaam");
+            Console.WriteLine("   10 – Toegangscode");
+
+            string keuze = Console.ReadLine();
+            Console.Clear();
+            if (keuze == "1")
+            {
+                VariabelenEnHoofdletters();
+            }
+            else if (keuze == "2")
+            {
+                MaaltafelsStringInterpolatie();
+            }
+            else if (keuze == "3")
+            {
+                RuimteStringInterpolatie();
+            }
+            else if (keuze == "4")
+            {
+                BerekenBtw();
+            }
+            else if (keuze == "5")
+            {
+                LeetSpeak();
+            }
+            else if (keuze == "6")
+            {
+                Instructies();
+            }
+            else if (keuze == "7")
+            {
+                SomVanCijfers();
+            }
+            else if (keuze == "8")
+            {
+                NaamUitMail();
+            }
+            else if (keuze == "9")
+            {
+                EersteLetterEnAchternaam();
+            }
+            else if (keuze == "10")
+            {
+                Toegangscode();
+            }
+            else
+            {
+                Console.WriteLine("Verkeerde keuze!");
+            }
+        }
         public static void VariabelenEnHoofdletters()
         {
             System.Console.WriteLine("Welke tekst moet ik omzetten?");

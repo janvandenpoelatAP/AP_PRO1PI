@@ -8,6 +8,42 @@ namespace LaboOefeningen
 {
     public class VariabelenEnDatatypes
     {
+        public static void Keuzemenu()
+        {
+            Console.WriteLine("Kies uit volgende methoden door een cijfer te tikken:");
+            Console.WriteLine("    1 – Optellen");
+            Console.WriteLine("    2 – VerbruikWagen");
+            Console.WriteLine("    3 – BeetjeWiskunde");
+            Console.WriteLine("    4 – Maaltafels");
+            Console.WriteLine("    5 – Ruimte");
+
+            string keuze = Console.ReadLine();
+            Console.Clear();
+            if (keuze == "1")
+            {
+                Optellen();
+            }
+            else if (keuze == "2")
+            {
+                VerbruikWagen();
+            }
+            else if (keuze == "3")
+            {
+                BeetjeWiskunde();
+            }
+            else if (keuze == "4")
+            {
+                Maaltafels();
+            }
+            else if (keuze == "5")
+            {
+                Ruimte();
+            }
+            else
+            {
+                Console.WriteLine("Verkeerde keuze!");
+            }
+        }
         public static void Optellen()
         {
             Console.WriteLine("Wat is het eerste getal?");

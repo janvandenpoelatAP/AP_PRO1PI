@@ -4,6 +4,42 @@ namespace LaboOefeningen
 {
     public class EenProgrammaSchrijvenInCSharp
     {
+        public static void Keuzemenu()
+        {
+            Console.WriteLine("Kies uit volgende methoden door een cijfer te tikken:");
+            Console.WriteLine("    1 – MijnEersteMethode");
+            Console.WriteLine("    2 – MijnEersteProgramma");
+            Console.WriteLine("    3 – MijnEersteProgramma_FG");
+            Console.WriteLine("    4 – Rommelzin");
+            Console.WriteLine("    5 – GekleurdeRommelzin");
+
+            string keuze = Console.ReadLine();
+            Console.Clear();
+            if (keuze == "1")
+            {
+                MijnEersteMethode();
+            }
+            else if (keuze == "2")
+            {
+                MijnEersteProgramma();
+            }
+            else if (keuze == "3")
+            {
+                MijnEersteProgramma_FG();
+            }
+            else if (keuze == "4")
+            {
+                Rommelzin();
+            }
+            else if (keuze == "5")
+            {
+                GekleurdeRommelzin();
+            }
+            else
+            {
+                Console.WriteLine("Verkeerde keuze!");
+            }
+        }
         public static void MijnEersteMethode()
         {
             Console.WriteLine("Mijn eerste methode werkt!");
