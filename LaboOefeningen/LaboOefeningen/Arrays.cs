@@ -16,9 +16,11 @@ namespace LaboOefeningen
             Console.WriteLine("3. Boodschappenlijst");
             Console.WriteLine("4. Kerstinkopen");
             Console.WriteLine("5. Lotto");
+            Console.WriteLine("6. IntegerIndexOf");
+            Console.WriteLine("7. StringBinarySearch");
+            Console.WriteLine("8. Boodschappenlijst_List");
+            Console.WriteLine("9. Kerstinkopen_List");
             Console.WriteLine("10. ArrayTrueFalse_2");
-            Console.WriteLine("11. IntegerIndexOf");
-            Console.WriteLine("12. StringBinarySearch");
             int keuze = Convert.ToInt32(Console.ReadLine());
             if (keuze == 1)
             {
@@ -40,17 +42,25 @@ namespace LaboOefeningen
             {
                 Lotto();
             }
-            else if (keuze == 10)
-            {
-                ArrayTrueFalse_2();
-            }
-            else if (keuze == 11)
+            else if (keuze == 6)
             {
                 IntegerIndexOf();
             }
-            else if (keuze == 12)
+            else if (keuze == 7)
             {
                 StringBinarySearch();
+            }
+            else if (keuze == 8)
+            {
+                BoodschappenlijstList();
+            }
+            else if (keuze == 9)
+            {
+                KerstinkopenList();
+            }
+            else if (keuze == 10)
+            {
+                ArrayTrueFalse_2();
             }
         }
         public static void ArrayTrueFalse()
@@ -376,6 +386,90 @@ namespace LaboOefeningen
             {
                 Console.WriteLine($"Je zocht {zoekWaarde}, die is gevonden op index {index}");
             }
+            Console.ReadKey();
+        }
+        public static void BoodschappenlijstList()
+        {
+            Console.WriteLine("We gaan de boodschappenlijst samenstellen. Hoeveel items wil je opschrijven?");
+
+            int aantal = Convert.ToInt32(Console.ReadLine());
+            List<string> items = new List<string>(); 
+
+            for (int i = 0; i < aantal; i++)
+            {
+                Console.WriteLine($"Wat is item {i + 1} op je lijst?");
+                items.Add(Console.ReadLine());
+            }
+
+            items.Sort();
+            Console.WriteLine("Dit is je gesorteerde lijst: ");
+
+            for (int i = 0; i < items.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}: {items[i]}");
+            }
+
+            Console.WriteLine("Op naar de winkel!");
+            string nogWinkelen = "Ja";
+
+            while (nogWinkelen.ToUpper() == "JA")
+            {
+                Console.WriteLine("Welk item heb je gekocht?");
+
+                string item = Console.ReadLine();
+
+                // if (Array.BinarySearch(items, item) < 0)
+                if (items.IndexOf(item) < 0)
+                {
+                    Console.WriteLine("Dit item bevindt zich niet op de lijst!");
+                }
+                else
+                {
+                    items[items.IndexOf(item)] = "gekocht";
+                }
+
+                Console.WriteLine("Nog winkelen? (Ja of Nee)");
+                nogWinkelen = Console.ReadLine();
+            }
+
+            Console.WriteLine("Naar huis met de boodschappen!");
+            Console.WriteLine("Volgende items van je lijst ben je vergeten te kopen: ");
+
+            for (int i = 0; i < items.Count; i++)
+            {
+                if (items[i] != "gekocht")
+                {
+                    Console.Write(items[i] + " ");
+                }
+            }
+            Console.ReadKey();
+        }
+        public static void KerstinkopenList()
+        {
+            //Hiervoor moet je wel bovenaan deze class 'using System.Linq;' vermelden. 
+
+            Console.WriteLine("Wat is het budget voor je kerstinkopen?");
+            double budget = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Hoeveel cadeautjes wil je kopen?");
+            int aantal = Convert.ToInt32(Console.ReadLine());
+
+            List<double> cadeautjes = new List<double>();
+
+            for (int i = 0; i < aantal; i++)
+            {
+                Console.WriteLine($"Prijs van cadeau {i + 1}?");
+                cadeautjes.Add(Convert.ToDouble(Console.ReadLine()));
+                if (cadeautjes.Sum() > budget)
+                {
+                    Console.WriteLine($"Je bent al {(cadeautjes.Sum() - budget):F1} euro over het budget!");
+                }
+            }
+
+            Console.WriteLine("Info over je aankopen: ");
+            Console.WriteLine($"Totaal bedrag: {cadeautjes.Sum():F1} euro.");
+            Console.WriteLine($"Duurste cadeau: {cadeautjes.Max():F1} euro.");
+            Console.WriteLine($"Goedkoopste cadeau: {cadeautjes.Min():F1} euro.");
+            Console.WriteLine($"Gemiddelde prijs: {cadeautjes.Average():F1} euro.");
             Console.ReadKey();
         }
     }
